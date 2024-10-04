@@ -38,6 +38,10 @@ body {
     --space-100: 8px;
     --space-150: 12px;
     --space-200: 24px;
+    --text-preset-1: 24px;
+    --text-preset-2: 16px;
+    --text-preset-3: 14px;
+
 
     font-family: "Figtree", sans-serif;
     font-weight: 500p;
@@ -80,7 +84,7 @@ body {
 
 .tag {
     font-weight: 800;
-    font-size: 14px;
+    font-size: var(--text-preset-3);
     line-height: 150%;
     background-color: var(--yellow);
     width: max-content;
@@ -89,12 +93,12 @@ body {
 }
 
 .published-date {
-    font-size: 14px;
+    font-size: var(--text-preset-3);
     line-height: 150%;
 }
 
 .card-title {
-    font-size: 24px;
+    font-size: var(--text-preset-1);
     line-height: 150%;
     font-weight: 800;
 }
@@ -102,7 +106,7 @@ body {
 
 .description {
     color: var(--gray-500);
-    font-size: 16px;
+    font-size: var(--text-preset-2);
     line-height: 150%;
 }
 
@@ -119,7 +123,7 @@ body {
 
 .author .name {
     font-weight: 800;
-    font-size: 14px;
+    font-size: var(--text-preset-3);
     line-height: 150%;
 }
 
@@ -142,4 +146,16 @@ body {
     left: 0;
     text-align: center;
     width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        --text-preset-1: 20px;
+        --text-preset-2: 14px;
+        --text-preset-3: 12px;
+
+        font-size: 14px;
+        padding: var(--space-200);
+    }
 }
